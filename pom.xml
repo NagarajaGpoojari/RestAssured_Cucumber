@@ -1,107 +1,131 @@
-<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.Rest_Assured</groupId>
-  <artifactId>RestAssured-Cucumber</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <dependencies>
- 
-  
-    <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-testng</artifactId>
-        <version>7.14.0</version>
-    </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-    <!-- TestNG -->
-    <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>7.9.0</version>
-        <scope>test</scope>
-    </dependency>
+    <groupId>com.restassured</groupId>
+    <artifactId>restassured-cucumber</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-    <!-- Apache POI for Excel -->
-    <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>5.2.3</version>
-    </dependency>
+    <dependencies>
+        <!-- Cucumber + TestNG -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.15.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.15.0</version>
+            <scope>test</scope>
+        </dependency>
 
-    <!-- RestAssured -->
-    <dependency>
-        <groupId>io.rest-assured</groupId>
-        <artifactId>rest-assured</artifactId>
-        <version>5.4.0</version>
-    </dependency>
-    <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>gherkin</artifactId>
-    <version>27.0.0</version>
-</dependency>
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.14.0</version>
-</dependency>
+        <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
 
+        <!-- Rest Assured (scope changed to compile) -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-path</artifactId>
+            <version>5.4.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>xml-path</artifactId>
+            <version>5.4.0</version>
+            <scope>compile</scope>
+        </dependency>
 
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-core</artifactId>
-    <version>7.14.0</version>
-</dependency>
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.2</version>
+        </dependency>
 
+        <!-- Gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
 
-  <dependency>
-  	<groupId>Cucumber</groupId>
-  	<artifactId>APITesting</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </dependency>
-  
-  
-  
-    <!-- Allure Cucumber -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-cucumber7-jvm</artifactId>
-        <version>2.24.0</version>
-    </dependency>
+        <!-- Apache POI -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.3.0</version>
+        </dependency>
 
-    <!-- Allure TestNG -->
-    <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-testng</artifactId>
-        <version>2.24.0</version>
-    </dependency>
-    
-    
-<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
-<dependency>
-    <groupId>org.hamcrest</groupId>
-    <artifactId>hamcrest</artifactId>
-    <version>2.2</version>
-    <scope>test</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
-<dependency>
-    <groupId>com.jayway.jsonpath</groupId>
-    <artifactId>json-path</artifactId>
-    <version>2.9.0</version>
-</dependency>
+        <!-- Hamcrest -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
 
-</dependencies>
-
-<build>
-    <plugins>
-        <!-- Allure Report Plugin -->
-        <plugin>
+        <!-- Allure -->
+        <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-maven</artifactId>
-            <version>2.11.2</version>
-        </plugin>
-    </plugins>
-</build>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.24.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.24.0</version>
+            <scope>test</scope>
+        </dependency>
 
-  
+        <!-- Logging -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <parallel>methods</parallel>
+                    <threadCount>4</threadCount>
+                </configuration>
+            </plugin>
+
+            <!-- Allure Maven Plugin -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

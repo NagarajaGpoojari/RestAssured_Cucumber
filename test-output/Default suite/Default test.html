@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/15/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 26 13:06:01 IST 2025</td>
+<td>Started on:</td><td>Wed Dec 31 14:20:34 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (955 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4574 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,363 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a user", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1087571473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1087571473'><pre>java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Read user details", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1245154707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1245154707'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create a new user", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1518433895", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1518433895'><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate User API responses", "User API Testing"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace626198613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace626198613'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Generate auth token with different credentials", "Authentication Token Creation"</td>
+<td><div><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2070490607", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2070490607'><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Read user details", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2034494084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2034494084'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create a new user", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1934240801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1934240801'><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate User API responses", "User API Testing"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1636757378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1636757378'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a user", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+</pre></div><a href='#' onClick='toggleBox("stack-trace963888031", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace963888031'><pre>java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate User API responses", "User API Testing"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1445670456", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1445670456'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
+	at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update user details", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1108805444", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1108805444'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Generate auth token with different credentials", "Authentication Token Creation"</td>
+<td><div><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace621256882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace621256882'><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update user details", "API CRUD Operations"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace837048892", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace837048892'><pre>java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
+	at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+</pre></div></td>
+<td>0</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create multiple users with DataTable", "Create multiple users on Reqres.in"</td>
+<td><div><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CreateMultipleUsersSteps.sendPostRequestsForMultipleUsers(CreateMultipleUsersSteps.java:34)
+	at ✽.I send POST requests for multiple users(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2010778720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2010778720'><pre>java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.api.stepdefinitions.CreateMultipleUsersSteps.sendPostRequestsForMultipleUsers(CreateMultipleUsersSteps.java:34)
+	at ✽.I send POST requests for multiple users(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+<tr>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Generate auth token with different credentials", "Authentication Token Creation"</td>
+<td><div><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1629397349", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1629397349'><pre>java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failEquals(Assert.java:1582)
+	at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
+	at org.testng.Assert.assertNotEquals(Assert.java:2201)
+	at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
+	at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
+</pre></div></td>
+<td>3</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,45 +433,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get Users", "User API Testing"</td>
+<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Generate auth token with different credentials", "Authentication Token Creation"</td>
 <td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create a new user", "API CRUD Operations"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Read user details", "API CRUD Operations"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update user details", "API CRUD Operations"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate user details from API with database", "Validate API response with database"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a user", "API CRUD Operations"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate user details from API with database", "Validate API response with database"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
-<tr>
-<td title='com.api.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.api.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate user details from API with database", "Validate API response with database"</td>
-<td></td>
-<td>0</td>
-<td>com.api.runners.TestRunner@2eea88a1</td></tr>
+<td>4</td>
+<td>com.api.runners.TestRunner@38145825</td></tr>
 </table><p>
 </body>
 </html>

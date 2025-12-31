@@ -1,0 +1,8 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"4","","3","Authentication Token Creation","1","0","Generate auth token with different credentials","0"
+"6","","0","Validate API response with database","3","0","Validate user details from API with database","0"
+"0","","0","API CRUD Operations","1","0","Read user details","0"
+"0","","0","API CRUD Operations","1","0","Delete a user","0"
+"0","","0","API CRUD Operations","1","0","Create a new user","0"
+"0","","0","User API Testing","1","0","Get Users","0"
+"0","","0","API CRUD Operations","1","0","Update user details","0"

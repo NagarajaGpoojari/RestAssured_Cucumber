@@ -1,51 +1,49 @@
 package com.api.utils;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.*;
+import java.util.*;
 
 public class DBUtils {
-	
-	    private static Connection connection;
+    private Connection connection;
+    private ConfigReader config;
 
-	    public static void connectToDB() {
-	        try {
-	            String url = ConfigReader.getProperty("db.url");
-	            String user = ConfigReader.getProperty("db.user");
-	            String password = ConfigReader.getProperty("db.password");
-	            connection = DriverManager.getConnection(url, user, password);
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        }
-	    }
+    public DBUtils(ConfigReader config) {
+        this.config = config;
+    }
 
-	    public static Map<String, String> getUserFromDB(int userId) {
-	        Map<String, String> userData = new HashMap<>();
-	        try {
-	            String query = "SELECT name, job FROM users WHERE id = ?";
-	            PreparedStatement stmt = connection.prepareStatement(query);
-	            stmt.setInt(1, userId);
-	            ResultSet rs = stmt.executeQuery();
-	            if (rs.next()) {
-	                userData.put("name", rs.getString("name"));
-	                userData.put("job", rs.getString("job"));
-	            }
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        }
-	        return userData;
-	    }
+    public void connectToDB() {
+        try {
+            String url = config.getProperty("db.url");
+            String user = config.getProperty("db.user");
+            String password = config.getProperty("db.password");
+            connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to connect to DB", e);
+        }
+    }
 
-	    public static void closeConnection() {
-	        try {
-	            if (connection != null) connection.close();
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        }
-	    }
-	}
+    public Map<String, String> getRowData(String query, Object... params) {
+        Map<String, String> rowData = new HashMap<>();
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            for (int i = 0; i < params.length; i++) stmt.setObject(i + 1, params[i]);
+            ResultSet rs = stmt.executeQuery();
+            ResultSetMetaData meta = rs.getMetaData();
+            if (rs.next()) {
+                for (int col = 1; col <= meta.getColumnCount(); col++) {
+                    rowData.put(meta.getColumnName(col), rs.getString(col));
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error executing query", e);
+        }
+        return rowData;
+    }
 
+    public void closeConnection() {
+        try {
+            if (connection != null && !connection.isClosed()) connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error closing DB connection", e);
+        }
+    }
+}
