@@ -24,7 +24,7 @@ public class ValidateDatabaseConnection {
     @Given("I send a GET request for user {int}")
     public void getUserFromAPI(int userId) {
         ConfigReader config = new ConfigReader("resources/config.properties");
-        String baseUri = config.getProperty("baseUri");
+        String baseUri = config.getProperty("reqresbaseUri");
 
         RestAssured.baseURI = baseUri;
         response = RestAssured.given()
@@ -40,7 +40,6 @@ public class ValidateDatabaseConnection {
 
         dbUtils.closeConnection();
 
-        // Adjust JSON path keys based on actual API response structure
         String apiName = response.jsonPath().getString("data.first_name");
         String apiJob = response.jsonPath().getString("data.job");
 

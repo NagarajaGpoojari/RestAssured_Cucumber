@@ -14,9 +14,8 @@ public class GetUserSteps {
 
 	@Given("the API endpoint is {string}")
 	public void setApiEndpoint(String endpoint) {
-		// Initialize base URI dynamically from the endpoint
-		String baseUri = endpoint.split("/api")[0]; // e.g., https://reqres.in
-		this.endpoint = endpoint.substring(baseUri.length()); // e.g., /api/users?page=2
+		String baseUri = endpoint.split("/api")[0]; //- https://reqres.in
+		this.endpoint = endpoint.substring(baseUri.length()); //- /api/users?page=2
 		Helper.init(baseUri);
 	}
 

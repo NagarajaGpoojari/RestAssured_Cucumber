@@ -3,6 +3,8 @@ package com.api.stepdefinitions;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
+
+import com.api.utils.ConfigReader;
 import com.api.utils.Helper;
 import com.api.utils.TestContext;
 
@@ -10,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AuthTokenSteps {
-
+	public  ConfigReader config = new ConfigReader("resources/config.properties");
     private Response response;
     private Map<String, String> credentials;
 
@@ -23,13 +25,11 @@ public class AuthTokenSteps {
 
     @When("I send a POST request to create an auth token")
     public void iSendPostRequestToCreateAuthToken() {
-        // Initialize base URI using Helper
-        Helper.init("https://restful-booker.herokuapp.com");
-
+    	
+        String baseUri = config.getProperty("herokuappbaseUri");
+        Helper.init(baseUri);
         // Set request body
         Helper.setBody(credentials);
-
-        // Perform POST request using Helper
         response = Helper.post("/auth");
     }
 
@@ -38,8 +38,7 @@ public class AuthTokenSteps {
         Assert.assertEquals(response.getStatusCode(), 200, "Expected status code 200");
         String token = response.jsonPath().getString("token");
         Assert.assertNotNull(token, "Token should not be null");
-
-        // Save token in TestContext for reuse
+        
         TestContext.get().setToken(token);
         System.out.println("Token generated: " + token);
     }

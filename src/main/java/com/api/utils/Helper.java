@@ -13,13 +13,12 @@ public class Helper {
     private static ThreadLocal<RequestSpecification> requestSpec =
             ThreadLocal.withInitial(() -> RestAssured.given());
 
-    // Initialize base URI (always reset before setting)
+    // Initialize base URI 
     public static void init(String baseUri) {
-        reset(); // ensures fresh spec for each test run
+        reset(); 											// ensures fresh spec for each test run
         requestSpec.set(RestAssured.given().baseUri(baseUri));
     }
 
-    // Generic header setters
     public static void setHeaders(Map<String, String> headers) {
         requestSpec.get().headers(headers);
     }
@@ -28,7 +27,7 @@ public class Helper {
         requestSpec.get().header(key, value);
     }
 
-    // Predefined header shortcuts
+    // Predefined header 
     public static void setJsonHeader() {
         requestSpec.get().header("Content-Type", "application/json");
     }
@@ -37,15 +36,11 @@ public class Helper {
         requestSpec.get().header("Content-Type", "application/xml");
     }
 
-    public static void setTextHeader() {
-        requestSpec.get().header("Content-Type", "text/plain");
-    }
-
     public static void setFormUrlEncodedHeader() {
         requestSpec.get().header("Content-Type", "application/x-www-form-urlencoded");
     }
 
-    // Cookie support
+   
     public static void setCookies(Map<String, String> cookies) {
         requestSpec.get().cookies(cookies);
     }
@@ -60,7 +55,6 @@ public class Helper {
         requestSpec.get().contentType(ContentType.JSON).body(body);
     }
 
-    // HTTP methods with logging enabled
     public static Response get(String endpoint) {
         return requestSpec.get().log().all().when().get(endpoint).then().extract().response();
     }
@@ -81,7 +75,6 @@ public class Helper {
         return requestSpec.get().log().all().when().patch(endpoint).then().extract().response();
     }
 
-    // Reset request spec
     public static void reset() {
         requestSpec.set(RestAssured.given());
     }

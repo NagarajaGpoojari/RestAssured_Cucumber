@@ -30,7 +30,7 @@ public class CreateMultipleUsersSteps {
 			Helper.setBody(userData);
 			response = Helper.post(endpoint);
 
-			// Validate each response immediately
+			
 			Assert.assertEquals(response.getStatusCode(), 201,
 					"Expected status code 201 but got " + response.getStatusCode());
 		}
@@ -38,7 +38,6 @@ public class CreateMultipleUsersSteps {
 
 	@Then("each user should be created successfully with status code {int}")
 	public void validateMultipleUsersCreation(int expectedStatusCode) {
-		// Final assertion for last response (loop already validated each one)
 		Assert.assertEquals(response.getStatusCode(), expectedStatusCode,
 				"Expected status code " + expectedStatusCode + " but got " + response.getStatusCode());
 	}
