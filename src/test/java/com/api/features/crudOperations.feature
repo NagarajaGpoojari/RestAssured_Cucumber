@@ -1,49 +1,49 @@
-Feature: API CRUD Operations
+Feature: API CRUD Operations with Authentication
 
   @ReqresTests
   Scenario Outline: Create a new user
-    Given I set the POST endpoint
-    When I send a POST request with user data
+    Given I prepare the POST resource with auth type "<authType>"
+    When I trigger a POST call using user details
       | name   | job   |
       | <name> | <job> |
-    Then I should receive a <statusCode> status code
+    Then the service should return <statusCode> as the outcome
 
     Examples:
-      | name      | job                     | statusCode |
-      | Nagaraja  | Test Automation Engineer| 201        |
-      | John Doe  | Developer               | 201        |
+      | authType | name      | job                     | statusCode |
+      | BASIC    | Nagaraja  | Test Automation Engineer| 201        |
+      | BASIC    | John Doe  | Developer               | 201        |
 
   @ReqresTests
   Scenario Outline: Read user details
-    Given I set the GET endpoint for user "<userId>"
-    When I send a GET request
-    Then I should receive a <statusCode> status code
+    Given I configure the GET resource for user "<userId>" with auth type "<authType>"
+    When I execute a GET call
+    Then the service should respond with <statusCode>
 
     Examples:
-      | userId | statusCode |
-      | 2      | 200        |
-      | 5      | 200        |
+      | authType | userId | statusCode |
+      | BEARER   | 2      | 200        |
+      | BEARER   | 5      | 200        |
 
   @ReqresTests
   Scenario Outline: Update user details
-    Given I set the PUT endpoint for user "<userId>"
-    When I send a PUT request with updated data
+    Given I set up the PUT resource for user "<userId>" with auth type "<authType>"
+    When I perform a PUT call with modified data
       | name   | job   |
       | <name> | <job> |
-    Then I should receive a <statusCode> status code
+    Then the service should acknowledge with <statusCode>
 
     Examples:
-      | userId | name             | job                  | statusCode |
-      | 2      | Nagaraja Updated | Senior Test Engineer | 200        |
-      | 5      | John Updated     | Lead Developer       | 200        |
+      | authType | userId | name             | job                  | statusCode |
+      | BASIC    | 2      | Nagaraja Updated | Senior Test Engineer | 200        |
+      | BASIC    | 5      | John Updated     | Lead Developer       | 200        |
 
   @ReqresTests
   Scenario Outline: Delete a user
-    Given I set the DELETE endpoint for user "<userId>"
-    When I send a DELETE request
-    Then I should receive a <statusCode> status code
+    Given I define the DELETE resource for user "<userId>" with auth type "<authType>"
+    When I initiate a DELETE call
+    Then the service should confirm with <statusCode>
 
     Examples:
-      | userId | statusCode |
-      | 2      | 204        |
-      | 5      | 204        |
+      | authType | userId | statusCode |
+      | BEARER   | 2      | 204        |
+      | BEARER   | 5      | 204        |

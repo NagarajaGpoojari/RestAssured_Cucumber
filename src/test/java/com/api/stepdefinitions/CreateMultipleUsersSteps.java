@@ -4,41 +4,53 @@ import io.cucumber.java.en.*;
 import io.cucumber.datatable.DataTable;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import com.api.utils.Helper;
+import com.api.utils.*;
 
 import java.util.List;
 import java.util.Map;
 
 public class CreateMultipleUsersSteps {
 
-	private Response response;
-	private String endpoint;
+    private final TestContext context = TestContext.get();
+    private final ILogger logger = new Log4jLogger();
+    private Response response;
+    private String endpoint;
 
-	@Given("I set the POST endpoint for creating users")
-	public void setPostEndpointForUsers() {
-		Helper.init("https://reqres.in");
-		endpoint = "/api/users";
-	}
+    @Given("I prepare the bulk user creation resource with auth type {string}")
+    public void prepareBulkUserCreationResource(String authType) {
+        Helper.reset();
+        Helper.init("https://reqres.in");
+        endpoint = "/api/users";
 
-	@When("I send POST requests for multiple users")
-	public void sendPostRequestsForMultipleUsers(DataTable dataTable) {
-		// Convert DataTable into List of Maps
-		List<Map<String, String>> users = dataTable.asMaps(String.class, String.class);
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
 
-		for (Map<String, String> userData : users) {
-			Helper.setJsonHeader();
-			Helper.setBody(userData);
-			response = Helper.post(endpoint);
+        logger.info("Bulk user creation resource prepared with auth type: " + authType);
+    }
 
-			
-			Assert.assertEquals(response.getStatusCode(), 201,
-					"Expected status code 201 but got " + response.getStatusCode());
-		}
-	}
+    @When("I dispatch POST calls for each user entry")
+    public void dispatchPostCallsForUsers(DataTable dataTable) {
+        List<Map<String, String>> users = dataTable.asMaps(String.class, String.class);
 
-	@Then("each user should be created successfully with status code {int}")
-	public void validateMultipleUsersCreation(int expectedStatusCode) {
-		Assert.assertEquals(response.getStatusCode(), expectedStatusCode,
-				"Expected status code " + expectedStatusCode + " but got " + response.getStatusCode());
-	}
+        for (Map<String, String> userData : users) {
+            Helper.setJsonHeader();
+            Helper.setBody(userData);
+
+            response = Helper.post(endpoint);
+            context.setResponse(response);
+
+            logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
+
+            Assert.assertEquals(response.getStatusCode(), 201,
+                    "Expected status code 201 but got " + response.getStatusCode());
+        }
+    }
+
+    @Then("the system should confirm each creation with status {int}")
+    public void validateMultipleUsersCreation(int expectedStatusCode) {
+        int actualStatusCode = context.getResponse().getStatusCode();
+        logger.info("Validating bulk user creation: Expected = " + expectedStatusCode + ", Actual = " + actualStatusCode);
+        Assert.assertEquals(actualStatusCode, expectedStatusCode,
+                "Expected status code " + expectedStatusCode + " but got " + actualStatusCode);
+    }
 }

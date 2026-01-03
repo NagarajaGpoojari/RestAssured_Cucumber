@@ -1,13 +1,14 @@
-Feature: User API Testing
+Feature: User API Testing with Authentication
+
   @ReqresTests
   Scenario Outline: Validate User API responses
-    Given the API endpoint is "<endpoint>"
-    When I send a GET request to the endpoint
-    Then the response status code should be <statusCode>
-    And the response should contain "<expectedField>"
+    Given I configure the user API resource "<endpoint>" with auth type "<authType>"
+    When I perform a GET call on the user resource
+    Then the system should deliver <statusCode> as the status
+    And the body should include the field "<expectedField>"
 
     Examples:
-      | endpoint                          | statusCode | expectedField |
-      | https://reqres.in/api/users?page=2 | 200        | page          |
-      | https://reqres.in/api/users/2      | 200        | data          |
-      | https://reqres.in/api/unknown/2    | 200        | data          |
+      | authType | endpoint                          | statusCode | expectedField |
+      | BASIC    | https://reqres.in/api/users?page=2 | 200        | page          |
+      | BEARER   | https://reqres.in/api/users/2      | 200        | data          |
+      | BASIC    | https://reqres.in/api/unknown/2    | 200        | data          |

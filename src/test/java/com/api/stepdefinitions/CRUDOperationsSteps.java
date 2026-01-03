@@ -3,92 +3,129 @@ package com.api.stepdefinitions;
 import io.cucumber.java.en.*;
 import io.cucumber.datatable.DataTable;
 import io.restassured.response.Response;
-import org.testng.Assert;
-import com.api.utils.Helper;
+import com.api.utils.*;
 
 import java.util.Map;
 
+import org.testng.Assert;
+
 public class CRUDOperationsSteps {
 
-    private Response response;
+    private final TestContext context = TestContext.get();
+    private final ILogger logger = new Log4jLogger();
     private String endpoint;
 
-    @Given("I set the POST endpoint")
-    public void setPostEndpoint() {
-        // Always reset before starting a new scenario
+    // ---------------- CREATE ----------------
+    @Given("I prepare the POST resource with auth type {string}")
+    public void preparePostResource(String authType) {
         Helper.reset();
         Helper.init("https://reqres.in");
         endpoint = "/api/users";
+
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
+        logger.info("Auth applied for POST resource using type: " + authType);
     }
 
-    @When("I send a POST request with user data")
-    public void sendPostRequest(DataTable dataTable) {
+    @When("I trigger a POST call using user details")
+    public void triggerPostCall(DataTable dataTable) {
         Map<String, String> userData = dataTable.asMap(String.class, String.class);
-
         Helper.setJsonHeader();
-        Helper.setHeader("User-Agent", "Mozilla/5.0");
-        Helper.setHeader("Accept", "*/*");
         Helper.setBody(userData);
 
-        // Logging is already enabled in Helper methods
-        response = Helper.post(endpoint);
+        Response response = Helper.post(endpoint);
+        context.setResponse(response);
+        logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
     }
 
-    @Given("I set the GET endpoint for user {string}")
-    public void setGetEndpoint(String userId) {
+    @Then("the service should return {int} as the outcome")
+    public void validatePostOutcome(int expectedStatus) {
+        int actualStatus = context.getResponse().getStatusCode();
+        Assert.assertEquals(actualStatus, expectedStatus,
+                "Expected " + expectedStatus + " but got " + actualStatus);
+    }
+
+    // ---------------- READ ----------------
+    @Given("I configure the GET resource for user {string} with auth type {string}")
+    public void configureGetResource(String userId, String authType) {
         Helper.reset();
         Helper.init("https://reqres.in");
         endpoint = "/api/users/" + userId;
+
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
+        logger.info("Auth applied for GET resource using type: " + authType);
     }
 
-    @When("I send a GET request")
-    public void sendGetRequest() {
+    @When("I execute a GET call")
+    public void executeGetCall() {
         Helper.setJsonHeader();
-        Helper.setHeader("User-Agent", "Mozilla/5.0");
-        Helper.setHeader("Accept", "*/*");
-        response = Helper.get(endpoint); // logs request details
+        Response response = Helper.get(endpoint);
+        context.setResponse(response);
+        logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
     }
 
-    @Given("I set the PUT endpoint for user {string}")
-    public void setPutEndpoint(String userId) {
+    @Then("the service should respond with {int}")
+    public void validateGetResponse(int expectedStatus) {
+        int actualStatus = context.getResponse().getStatusCode();
+        Assert.assertEquals(actualStatus, expectedStatus,
+                "Expected " + expectedStatus + " but got " + actualStatus);
+    }
+
+    // ---------------- UPDATE ----------------
+    @Given("I set up the PUT resource for user {string} with auth type {string}")
+    public void setupPutResource(String userId, String authType) {
         Helper.reset();
         Helper.init("https://reqres.in");
         endpoint = "/api/users/" + userId;
+
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
+        logger.info("Auth applied for PUT resource using type: " + authType);
     }
 
-    @When("I send a PUT request with updated data")
-    public void sendPutRequest(DataTable dataTable) {
+    @When("I perform a PUT call with modified data")
+    public void performPutCall(DataTable dataTable) {
         Map<String, String> updatedData = dataTable.asMap(String.class, String.class);
-
         Helper.setJsonHeader();
-        Helper.setHeader("User-Agent", "Mozilla/5.0");
-        Helper.setHeader("Accept", "*/*");
         Helper.setBody(updatedData);
 
-        response = Helper.put(endpoint); // logs request details
+        Response response = Helper.put(endpoint);
+        context.setResponse(response);
+        logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
     }
 
-    @Given("I set the DELETE endpoint for user {string}")
-    public void setDeleteEndpoint(String userId) {
+    @Then("the service should acknowledge with {int}")
+    public void validatePutResponse(int expectedStatus) {
+        int actualStatus = context.getResponse().getStatusCode();
+        Assert.assertEquals(actualStatus, expectedStatus,
+                "Expected " + expectedStatus + " but got " + actualStatus);
+    }
+
+    // ---------------- DELETE ----------------
+    @Given("I define the DELETE resource for user {string} with auth type {string}")
+    public void defineDeleteResource(String userId, String authType) {
         Helper.reset();
         Helper.init("https://reqres.in");
         endpoint = "/api/users/" + userId;
+
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
+        logger.info("Auth applied for DELETE resource using type: " + authType);
     }
 
-    @When("I send a DELETE request")
-    public void sendDeleteRequest() {
+    @When("I initiate a DELETE call")
+    public void initiateDeleteCall() {
         Helper.setJsonHeader();
-        Helper.setHeader("User-Agent", "Mozilla/5.0");
-        response = Helper.delete(endpoint); // logs request details
+        Response response = Helper.delete(endpoint);
+        context.setResponse(response);
+        logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
     }
 
-    @Then("I should receive a {int} status code")
-    public void validateStatusCode(int expectedStatusCode) {
-        // Logs response status code for debugging
-        System.out.println("Response Status Code: " + response.getStatusCode());
-        System.out.println("Response Body: " + response.getBody().asString());
-
-        Assert.assertEquals(response.getStatusCode(), expectedStatusCode,
-                "Expected status code " + expectedStatusCode + " but got " + response.getStatusCode());
+    @Then("the service should confirm with {int}")
+    public void validateDeleteResponse(int expectedStatus) {
+        int actualStatus = context.getResponse().getStatusCode();
+        Assert.assertEquals(actualStatus, expectedStatus,
+                "Expected " + expectedStatus + " but got " + actualStatus);
     }
 }

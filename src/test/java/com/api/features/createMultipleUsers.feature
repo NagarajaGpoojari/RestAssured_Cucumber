@@ -1,16 +1,20 @@
-Feature: Create multiple users on Reqres.in
+Feature: Create multiple users on Reqres.in with Authentication
 
   @ReqresTests
-  Scenario: Create multiple users with DataTable
-    Given I set the POST endpoint for creating users
-    When I send POST requests for multiple users
+  Scenario Outline: Create multiple users with DataTable
+    Given I prepare the bulk user creation resource with auth type "<authType>"
+    When I dispatch POST calls for each user entry
       | name       | job                     |
-      | Nagaraja   | Test Automation Engineer|
-      | John Doe   | Developer               |
-      | Alice      | QA Engineer             |
-      | Bob        | DevOps Engineer         |
-      | Clara      | Product Manager         |
-      | David      | UX Designer             |
-      | Emma       | Business Analyst        |
-      | Frank      | Scrum Master            |
-    Then each user should be created successfully with status code 201
+      | <name>     | <job>                   |
+    Then the system should confirm each creation with status <statusCode>
+
+    Examples:
+      | authType | name      | job                     | statusCode |
+      | BASIC    | Nagaraja  | Test Automation Engineer| 201        |
+      | BASIC    | John Doe  | Developer               | 201        |
+      | BEARER   | Alice     | QA Engineer             | 201        |
+      | BEARER   | Bob       | DevOps Engineer         | 201        |
+      | BASIC    | Clara     | Product Manager         | 201        |
+      | BASIC    | David     | UX Designer             | 201        |
+      | BEARER   | Emma      | Business Analyst        | 201        |
+      | BEARER   | Frank     | Scrum Master            | 201        |

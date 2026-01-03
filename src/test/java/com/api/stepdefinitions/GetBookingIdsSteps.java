@@ -1,66 +1,90 @@
 package com.api.stepdefinitions;
 
-import com.api.utils.ConfigReader;
-import com.api.utils.Helper;
+import com.api.utils.*;
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
+import org.testng.Assert;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.testng.Assert;
 
 public class GetBookingIdsSteps {
-	private static ConfigReader configReader = new ConfigReader("config.properties");
-	private Response response;
 
-	@Given("I initialize the Booking API")
-	public void initializeBookingApi() {
-		String baseUrl = configReader.getProperty("base.url");
-		Helper.init(baseUrl);
-		Helper.setJsonHeader(); // default header for API calls
-	}
+    private static ConfigReader configReader = new ConfigReader("config.properties");
+    private final TestContext context = TestContext.get();
+    private final ILogger logger = new Log4jLogger();
+    private String endpoint;
 
-	@When("I send a GET request to booking endpoint without any query parameters")
-	public void sendGetRequestWithoutParams() {
-		String endpoint = configReader.getProperty("endpoint.booking");
-		response = Helper.get(endpoint);
-	}
+    @Given("I prepare the Booking API using auth type {string}")
+    public void prepareBookingApi(String authType) {
+        String baseUrl = configReader.getProperty("base.url");
+        Helper.reset();
+        Helper.init(baseUrl);
 
-	@When("I send a GET request to booking endpoint with query parameters:")
-	public void sendGetRequestWithParams(io.cucumber.datatable.DataTable dataTable) {
-		Map<String, String> queryParams = new HashMap<>();
-		dataTable.asMaps().forEach(row -> {
-			String key = row.get("key");
-			String value = row.get("value");
-			if (value != null && !value.trim().isEmpty()) {
-				queryParams.put(key, value);
-			}
-		});
+        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+        Helper.setAuthProvider(provider);
 
-		String endpoint = configReader.getProperty("endpoint.booking");
+        Helper.setJsonHeader();
+        logger.info("Booking API prepared with base URL: " + baseUrl + " using auth type: " + authType);
+    }
 
-		StringBuilder endpointWithParams = new StringBuilder(endpoint);
-		if (!queryParams.isEmpty()) {
-			endpointWithParams.append("?");
-			queryParams.forEach((k, v) -> endpointWithParams.append(k).append("=").append(v).append("&"));
-			endpointWithParams.deleteCharAt(endpointWithParams.length() - 1); // remove trailing &
-		}
+    @When("I fetch booking IDs without any search filters")
+    public void fetchBookingIdsWithoutFilters() {
+        endpoint = configReader.getProperty("endpoint.booking");
+        logger.logRequest(endpoint, "GET", "No filters applied");
 
-		response = Helper.get(endpointWithParams.toString());
-	}
+        Response response = Helper.get(endpoint);
+        context.setResponse(response);
+        logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
+    }
 
-	@Then("the response status code should be {int}")
-	public void validateStatusCode(int expectedStatusCode) {
-		Assert.assertEquals(expectedStatusCode, response.getStatusCode());
-	}
+    @When("I fetch booking IDs using filters:")
+    public void fetchBookingIdsWithFilters(io.cucumber.datatable.DataTable dataTable) {
+        Map<String, String> queryParams = new HashMap<>();
+        dataTable.asMaps().forEach(row -> {
+            String key = row.get("key");
+            String value = row.get("value");
+            if (value != null && !value.trim().isEmpty()) {
+                queryParams.put(key, value);
+            }
+        });
 
-	@Then("the response should contain a non-empty list of booking IDs")
-	public void validateNonEmptyBookingIds() {
-		Assert.assertTrue(response.jsonPath().getList("").size() > 0);
-	}
+        endpoint = configReader.getProperty("endpoint.booking");
+        StringBuilder endpointWithParams = new StringBuilder(endpoint);
+        if (!queryParams.isEmpty()) {
+            endpointWithParams.append("?");
+            queryParams.forEach((k, v) -> endpointWithParams.append(k).append("=").append(v).append("&"));
+            endpointWithParams.deleteCharAt(endpointWithParams.length() - 1);
+        }
 
-	@Then("the response should contain booking IDs matching the filter criteria")
-	public void validateFilteredBookingIds() {
-		Assert.assertTrue(response.jsonPath().getList("").size() > 0);
-	}
+        logger.logRequest(endpointWithParams.toString(), "GET", "Filters: " + queryParams);
+        Response response = Helper.get(endpointWithParams.toString());
+        context.setResponse(response);
+        logger.logResponse(endpointWithParams.toString(), response.getStatusCode(), response.getBody().asPrettyString());
+    }
+
+    @Then("the system should reply with status {int}")
+    public void validateBookingStatus(int expectedStatusCode) {
+        Response response = context.getResponse();
+        int actualStatusCode = response.getStatusCode();
+        logger.info("Validating booking status: Expected = " + expectedStatusCode + ", Actual = " + actualStatusCode);
+        Assert.assertEquals(actualStatusCode, expectedStatusCode,
+                "Expected status " + expectedStatusCode + " but got " + actualStatusCode);
+    }
+
+    @Then("the payload should include a non-empty list of booking IDs")
+    public void validateNonEmptyBookingIds() {
+        Response response = context.getResponse();
+        logger.debug("Checking non-empty booking IDs list");
+        Assert.assertTrue(response.jsonPath().getList("").size() > 0,
+                "Booking IDs list is empty in response");
+    }
+
+    @Then("the payload should include booking IDs that match the filters")
+    public void validateFilteredBookingIds() {
+        Response response = context.getResponse();
+        logger.debug("Checking booking IDs match filter criteria");
+        Assert.assertTrue(response.jsonPath().getList("").size() > 0,
+                "No booking IDs matched the filter criteria");
+    }
 }

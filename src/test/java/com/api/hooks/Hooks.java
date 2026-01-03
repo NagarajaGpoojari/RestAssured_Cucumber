@@ -1,20 +1,21 @@
 package com.api.hooks;
 
-import  io.cucumber.java.After;
+import com.api.utils.ILogger;
+import com.api.utils.Log4jLogger;
+
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hooks {
-	
-	    @Before
-	    public void beforeScenario() {
-	        System.out.println("Starting scenario...");
-	    }
+	private final ILogger logger = new Log4jLogger();
 
-	    @After
-	    public void afterScenario() {
-	        System.out.println("Ending scenario...");
-	    }
+	@Before
+	public void beforeScenario() {
+		logger.info("Starting scenario execution...");
 	}
 
-
-
+	@After
+	public void afterScenario() {
+		logger.info("Scenario execution completed.");
+	}
+}

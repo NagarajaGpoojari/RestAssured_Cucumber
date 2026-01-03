@@ -15,11 +15,10 @@ import org.testng.annotations.DataProvider;
         },
         monochrome = true,
         dryRun = false,                               	 // executes only @RestfuleBooker tags Scenarios
-  //      tags = "@RestfuleBooker"                		 // executes Both @RestfuleBooker  and @ReqresTests tags Scenarios
-  //	  tags = "@RestfuleBooker and @ReqresTests"      
-        tags = "(@RestfuleBooker or @ReqresTests) and not @Ignore" 
-        		// executes Both @RestfuleBooker  and @ReqresTests tags Scenarios but Ignores @Ignore tags 
-
+    //    tags = "@RestfuleBooker"                		 // executes Both @RestfuleBooker  and @ReqresTests tags Scenarios
+  	//  	  tags = "@ReqresTests"      
+          tags = "(@RestfuleBooker or @ReqresTests) and not @Ignore" 
+        		
 		)
 public class TestRunner extends AbstractTestNGCucumberTests {
 	

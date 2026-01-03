@@ -1,14 +1,15 @@
 Feature: Authentication Token Creation
 
-@RestfuleBooker
+  @RestfulBooker
   Scenario Outline: Generate auth token with different credentials
-    Given I have username "<username>" and password "<password>"
-    When I send a POST request to create an auth token
-    Then I should receive a <status> response
+    Given I authenticate using "<authType>" with username "<username>" and password "<password>"
+    When I send a POST request to create an auth token at "<authUrl>"
+    Then the auth response status should be <expectedStatus>
+    And the auth response should contain "<expectedField>"
 
     Examples:
-      | username | password     | status  |
-      | admin    | password123  | success |
-      | admin    | wrongpass    | failure |
-      | wrong    | password123  | failure |
-      |          |              | failure |
+      | authType | username | password     | authUrl                                | expectedStatus | expectedField |
+      | BASIC    | admin    | password123  | https://restful-booker.herokuapp.com/auth | 200            | token         |
+      | BASIC    | admin    | wrongpass    | https://restful-booker.herokuapp.com/auth | 403            | error         |
+      | BASIC    | wrong    | password123  | https://restful-booker.herokuapp.com/auth | 403            | error         |
+      | BASIC    |          |              | https://restful-booker.herokuapp.com/auth | 403            | error         |

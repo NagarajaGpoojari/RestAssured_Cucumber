@@ -1,301 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="16" passed="1" failed="15" skipped="0">
+<testng-results ignored="0" total="19" passed="0" failed="19" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-31T14:20:34 IST" name="Default suite" finished-at="2025-12-31T14:20:38 IST" duration-ms="4574">
+  <suite started-at="2026-01-03T15:35:22 IST" name="Default suite" finished-at="2026-01-03T15:35:32 IST" duration-ms="10064">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-12-31T14:20:34 IST" name="Default test" finished-at="2025-12-31T14:20:38 IST" duration-ms="4574">
+    <test started-at="2026-01-03T15:35:22 IST" name="Default test" finished-at="2026-01-03T15:35:32 IST" duration-ms="10064">
       <class name="com.api.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="setUpClass" finished-at="2025-12-31T14:20:34 IST" duration-ms="269" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="setUpClass" finished-at="2026-01-03T15:35:22 IST" duration-ms="187" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3a62c01e]]>
+                <![CDATA[org.testng.TestRunner@38548b19]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:38 IST" duration-ms="4240" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Generate auth token with different credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Authentication Token Creation"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:38 IST" duration-ms="3625" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Generate auth token with different credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Authentication Token Creation"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected failure but got success did not expect [200] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failEquals(Assert.java:1582)
-at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
-at org.testng.Assert.assertNotEquals(Assert.java:2201)
-at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
-at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:38 IST" duration-ms="3632" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Generate auth token with different credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Authentication Token Creation"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected failure but got success did not expect [200] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failEquals(Assert.java:1582)
-at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
-at org.testng.Assert.assertNotEquals(Assert.java:2201)
-at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
-at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3083" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Create a new user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["API CRUD Operations"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:38 IST" duration-ms="3624" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Generate auth token with different credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Authentication Token Creation"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected failure but got success did not expect [200] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected failure but got success did not expect [200] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failEquals(Assert.java:1582)
-at org.testng.Assert.assertNotEqualsImpl(Assert.java:157)
-at org.testng.Assert.assertNotEquals(Assert.java:2201)
-at com.api.stepdefinitions.AuthTokenSteps.iShouldReceiveFailureResponse(AuthTokenSteps.java:49)
-at ✽.I should receive a failure response(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/AuthToken.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3075" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Create a new user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["API CRUD Operations"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 201 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3091" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate User API responses"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User API Testing"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
-at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3097" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate User API responses"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User API Testing"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
-at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3075" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate User API responses"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["User API Testing"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.GetUserSteps.validateStatusCode(GetUserSteps.java:30)
-at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:6)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="3063" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5349" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -304,7 +30,7 @@ at ✽.the response status code should be 200(file:///C:/Users/Admin/git/RestAss
             </param>
             <param index="1">
               <value>
-                <![CDATA["Create multiple users on Reqres.in"]]>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
               </value>
             </param>
           </params>
@@ -320,15 +46,411 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CreateMultipleUsersSteps.sendPostRequestsForMultipleUsers(CreateMultipleUsersSteps.java:34)
-at ✽.I send POST requests for multiple users(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="181" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5371" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5352" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate User API responses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User API Testing with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
+at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5357" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5367" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5387" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5363" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:28 IST" duration-ms="5934" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate User API responses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User API Testing with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
+at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5379" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate User API responses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User API Testing with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
+at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:27 IST" duration-ms="5366" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3398" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create multiple users with DataTable"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create multiple users on Reqres.in with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
+at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3359" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create a new user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API CRUD Operations with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CRUDOperationsSteps.validatePostOutcome(CRUDOperationsSteps.java:44)
+at ✽.the service should return 201 as the outcome(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3342" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create a new user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["API CRUD Operations with Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 201 but got 403 expected [201] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.api.stepdefinitions.CRUDOperationsSteps.validatePostOutcome(CRUDOperationsSteps.java:44)
+at ✽.the service should return 201 as the outcome(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3411" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -337,31 +459,31 @@ at ✽.I send POST requests for multiple users(file:///C:/Users/Admin/git/RestAs
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+              <![CDATA[Expected 200 but got 403 expected [200] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+at com.api.stepdefinitions.CRUDOperationsSteps.validateGetResponse(CRUDOperationsSteps.java:71)
+at ✽.the service should respond with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="169" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3368" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -370,31 +492,31 @@ at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+              <![CDATA[Expected 200 but got 403 expected [200] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
+at com.api.stepdefinitions.CRUDOperationsSteps.validateGetResponse(CRUDOperationsSteps.java:71)
+at ✽.the service should respond with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="182" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:32 IST" duration-ms="4456" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -403,31 +525,31 @@ at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+              <![CDATA[Expected 200 but got 403 expected [200] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+at com.api.stepdefinitions.CRUDOperationsSteps.validatePutResponse(CRUDOperationsSteps.java:101)
+at ✽.the service should acknowledge with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="191" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3429" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -436,31 +558,31 @@ at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 200 but got 403 expected [200] but found [403]]]>
+              <![CDATA[Expected 200 but got 403 expected [200] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
+at com.api.stepdefinitions.CRUDOperationsSteps.validatePutResponse(CRUDOperationsSteps.java:101)
+at ✽.the service should acknowledge with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="175" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3401" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -469,31 +591,31 @@ at ✽.I should receive a 200 status code(file:///C:/Users/Admin/git/RestAssured
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 204 but got 403 expected [204] but found [403]]]>
+              <![CDATA[Expected 204 but got 403 expected [204] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+at com.api.stepdefinitions.CRUDOperationsSteps.validateDeleteResponse(CRUDOperationsSteps.java:128)
+at ✽.the service should confirm with 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-31T14:20:37 IST" duration-ms="162" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-03T15:35:31 IST" duration-ms="3361" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -502,31 +624,31 @@ at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured
             </param>
             <param index="1">
               <value>
-                <![CDATA["API CRUD Operations"]]>
+                <![CDATA["API CRUD Operations with Authentication"]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code 204 but got 403 expected [204] but found [403]]]>
+              <![CDATA[Expected 204 but got 403 expected [204] but found [403]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code 204 but got 403 expected [204] but found [403]
+              <![CDATA[java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at com.api.stepdefinitions.CRUDOperationsSteps.validateStatusCode(CRUDOperationsSteps.java:91)
-at ✽.I should receive a 204 status code(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
+at com.api.stepdefinitions.CRUDOperationsSteps.validateDeleteResponse(CRUDOperationsSteps.java:128)
+at ✽.the service should confirm with 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.api.runners.TestRunner@38145825]" started-at="2025-12-31T14:20:38 IST" name="tearDownClass" finished-at="2025-12-31T14:20:38 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.api.runners.TestRunner@5db4c359]" started-at="2026-01-03T15:35:32 IST" name="tearDownClass" finished-at="2026-01-03T15:35:32 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
