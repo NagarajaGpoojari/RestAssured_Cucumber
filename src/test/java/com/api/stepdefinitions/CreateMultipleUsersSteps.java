@@ -16,16 +16,14 @@ public class CreateMultipleUsersSteps {
     private Response response;
     private String endpoint;
 
-    @Given("I prepare the bulk user creation resource with auth type {string}")
-    public void prepareBulkUserCreationResource(String authType) {
+    @Given("I prepare the bulk user creation resource")
+    public void prepareBulkUserCreationResource() {
         Helper.reset();
-        Helper.init("https://reqres.in");
-        endpoint = "/api/users";
-
-        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
-        Helper.setAuthProvider(provider);
-
-        logger.info("Bulk user creation resource prepared with auth type: " + authType);
+        Helper.init("baseUrl");              
+        Helper.setEndpoint("userEndpoint");
+        endpoint = new ConfigReader("C:\\Users\\Admin\\git\\RestAssured_Cucumber\\src\\test\\resources\\config.properties").getProperty("userEndpoint");
+        
+        logger.info("Bulk user creation resource prepared using configReader");
     }
 
     @When("I dispatch POST calls for each user entry")
@@ -35,12 +33,8 @@ public class CreateMultipleUsersSteps {
         for (Map<String, String> userData : users) {
             Helper.setJsonHeader();
             Helper.setBody(userData);
-
-            response = Helper.post(endpoint);
-            context.setResponse(response);
-
+            response = Helper.postWithContext(endpoint, context);
             logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
-
             Assert.assertEquals(response.getStatusCode(), 201,
                     "Expected status code 201 but got " + response.getStatusCode());
         }

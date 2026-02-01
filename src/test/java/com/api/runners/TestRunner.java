@@ -6,12 +6,15 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-		     
-        features = "src/test/java/com/api/features",   // path to feature files
-        glue = {"com.api.stepdefinitions"},            // step definitions package
+		
+        features = "src/test/java/com/api/features/crudOperations.feature",   
+        glue = {
+        		"com.api.stepdefinitions",
+        		"com.api.hooks"
+        		},            
         plugin = {
                 "pretty",
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" //Allure report Generator by using TestNG
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" 
         },
         monochrome = true,
         dryRun = false,                               	 // executes only @RestfuleBooker tags Scenarios

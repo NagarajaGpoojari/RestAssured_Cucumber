@@ -8,200 +8,42 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">19</td><td class="num">10,064</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">8</td><td class="num">4,361</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="19">com.api.runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="19">1767434727805</td><td rowspan="19">3411</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m7">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m8">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m9">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m10">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m11">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m12">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m13">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m14">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m15">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m16">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m17">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m18">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="8">com.api.runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="8">1769926831695</td><td rowspan="8">3916</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m6">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m7">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Read user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validateGetResponse(CRUDOperationsSteps.java:71)
-	at ✽.the service should respond with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validate User API responses&quot;</td><td>&quot;User API Testing with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
-	at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validate User API responses&quot;</td><td>&quot;User API Testing with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
-	at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Validate User API responses&quot;</td><td>&quot;User API Testing with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.GetUserSteps.validateUserStatusCode(GetUserSteps.java:47)
-	at ✽.the system should deliver 200 as the status(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/GetUser.feature:7)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Update user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validatePutResponse(CRUDOperationsSteps.java:101)
-	at ✽.the service should acknowledge with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Read user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validateGetResponse(CRUDOperationsSteps.java:71)
-	at ✽.the service should respond with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:20)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a new user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validatePostOutcome(CRUDOperationsSteps.java:44)
-	at ✽.the service should return 201 as the outcome(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Update user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validatePutResponse(CRUDOperationsSteps.java:101)
-	at ✽.the service should acknowledge with 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:33)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Delete a user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validateDeleteResponse(CRUDOperationsSteps.java:128)
-	at ✽.the service should confirm with 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create multiple users with DataTable&quot;</td><td>&quot;Create multiple users on Reqres.in with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected status code 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CreateMultipleUsersSteps.dispatchPostCallsForUsers(CreateMultipleUsersSteps.java:44)
-	at ✽.I dispatch POST calls for each user entry(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/createMultipleUsers.feature:6)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a new user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validatePostOutcome(CRUDOperationsSteps.java:44)
-	at ✽.the service should return 201 as the outcome(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:9)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Delete a user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1419)
-	at org.testng.Assert.assertEquals(Assert.java:1383)
-	at com.api.stepdefinitions.CRUDOperationsSteps.validateDeleteResponse(CRUDOperationsSteps.java:128)
-	at ✽.the service should confirm with 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:44)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Delete a user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:45)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Delete a user&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 204 but got 403 expected [204] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 204(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:45)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a new user with valid details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 201(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:10)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Retrieve user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:21)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Retrieve user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:21)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Update existing user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:34)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Update existing user details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 200 but got 403 expected [200] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 200(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:34)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.api.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create a new user with valid details&quot;</td><td>&quot;API CRUD Operations with Authentication&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Expected 201 but got 403 expected [201] but found [403]
+	at com.api.stepdefinitions.CRUDOperationsSteps.validateResponseStatus(CRUDOperationsSteps.java:76)
+	at ✽.the response status should be 201(file:///C:/Users/Admin/git/RestAssured_Cucumber/src/test/java/com/api/features/crudOperations.feature:10)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

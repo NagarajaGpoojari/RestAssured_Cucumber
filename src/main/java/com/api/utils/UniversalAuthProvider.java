@@ -9,9 +9,9 @@ import static io.restassured.RestAssured.given;
 
 /**
  * UniversalAuthProvider implements all authentication contracts.
- * Reusable for Basic, JWT, OAuth2, and Custom header-based auth.
+ * Supports Basic, Bearer/JWT, OAuth2, and Custom header-based auth.
  */
-public class UniversalAuthProvider implements BasicAuthContract, JwtAuthContract, OAuth2Contract, CustomAuthContract {
+public class UniversalAuthProvider implements BasicAuthContract, JwtAuth, OAuth2, CustomAuth {
 
     private String username;
     private String password;
@@ -60,6 +60,10 @@ public class UniversalAuthProvider implements BasicAuthContract, JwtAuthContract
                 .formParam("client_secret", clientSecret)
                 .post(tokenUrl);
 
+        if (response.statusCode() != 200) {
+            throw new RuntimeException("Failed to fetch OAuth2 token. Status: " + response.statusCode());
+        }
+
         return response.jsonPath().getString("access_token");
     }
 
@@ -75,13 +79,24 @@ public class UniversalAuthProvider implements BasicAuthContract, JwtAuthContract
     public void applyAuth(RequestSpecification request) {
         if (username != null && password != null) {
             request.header("Authorization", getBasicAuthHeader());
+            System.out.println("Applied Basic Auth");
         } else if (jwtToken != null) {
             request.header("Authorization", getBearerToken());
+            System.out.println("Applied Bearer Token");
         } else if (clientId != null && clientSecret != null) {
             String accessToken = fetchOAuth2Token();
             request.header("Authorization", "Bearer " + accessToken);
+            System.out.println("Applied OAuth2 Token");
         } else if (customHeaderName != null && customToken != null) {
             request.header(customHeaderName, customToken);
+            System.out.println("Applied Custom Header");
         }
+    }
+
+    // ---------------- TOKEN ACCESSOR ----------------
+    public String getToken() {
+        if (jwtToken != null) return jwtToken;
+        if (clientId != null && clientSecret != null) return fetchOAuth2Token();
+        return null;
     }
 }

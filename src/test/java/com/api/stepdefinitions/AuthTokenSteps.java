@@ -16,16 +16,22 @@ public class AuthTokenSteps {
     private Map<String, String> credentials;
     private String endpoint;
 
-    @Given("I authenticate using {string} with username {string} and password {string}")
-    public void authenticate(String authType, String username, String password) {
-        UniversalAuthProvider provider = AuthManagerFactory.getAuthProvider(authType);
+    @Given("I authenticate with username {string} and password {string}")
+    public void authenticate(String username, String password) {
+        // Use UniversalAuthProvider directly (Hooks already initialized global auth)
+        UniversalAuthProvider provider = new UniversalAuthProvider();
 
-        // Override credentials if provided in scenario
-        if (authType.equalsIgnoreCase("BASIC") && username != null && !username.isEmpty()) {
+        if (username != null && !username.isEmpty()) {
             provider.setCredentials(username, password);
         }
+
         Helper.setAuthProvider(provider);
-        logger.info("Authentication initialized with type: " + authType);
+        logger.info("Authentication initialized with provided credentials");
+        
+        // Store credentials for request body
+        credentials = new HashMap<>();
+        credentials.put("username", username == null ? "" : username);
+        credentials.put("password", password == null ? "" : password);
     }
 
     @When("I send a POST request to create an auth token at {string}")
@@ -34,15 +40,10 @@ public class AuthTokenSteps {
         Helper.init(baseUri);
         endpoint = authUrl.substring(baseUri.length());
 
-        // Build request body for Basic auth
-        if (credentials == null) {
-            credentials = new HashMap<>();
-            credentials.put("username", ""); // fallback
-            credentials.put("password", "");
-        }
+        Helper.setJsonHeader();
         Helper.setBody(credentials);
 
-        response = Helper.post(endpoint);
+        response = RetryHelper.retry(() -> Helper.post(endpoint), 3, 2000);
         context.setResponse(response);
         logger.logResponse(endpoint, response.getStatusCode(), response.getBody().asPrettyString());
     }
